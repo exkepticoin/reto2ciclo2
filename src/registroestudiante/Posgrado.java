@@ -1,20 +1,22 @@
 package registroestudiante;
 
+//Creo la clase Posgrado.
 public class Posgrado extends Estudiante{
     
-    String modalidad;
-    
-    public Posgrado(String modalidad){
-        super();
+    //Declaro la variable modalidad.
+    private String modalidad;
+
+    //Creo el método constructor.
+    public Posgrado(String modalidad, String nombre, String edad, String programa, String tipo_etnia) {
+        super(nombre, edad, programa, tipo_etnia);
         this.modalidad = modalidad;
     }
-
-    public String toString(){
-        return "tEstudiante Posgrado\n" +
-               "\tNombre: " + Estudiante.nombre + "\n" +
-               "\tEdad: "+Estudiante.edad+" años\n" +
-               "\tPrograma: " + Estudiante.programa + "\n" +
-               "\tEtnia: " + Estudiante.tipo_etnia + "\n" +
-               "\tModalidad: " + modalidad;
+    
+    //Sobre escribo el método toString para ajustarlo al formato pedido, aprovechando el toString de la clase padre Estudiante.
+    @Override
+    public String toString() {
+        return "\tEstudiante Posgrado\n" +
+               super.toString() + "\n{" +
+               "\tModalidad: " + modalidad + "\n";
     }
 }

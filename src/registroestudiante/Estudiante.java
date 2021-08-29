@@ -1,12 +1,11 @@
-package registrodeestudiantes;
+package registroestudiante;
 
 public class Estudiante {
 
-    protected Registro[] registro;
-    public String nombre;
-    public String edad;
-    public String programa;
-    public String tipo_etnia;
+    protected String nombre;
+    protected String edad;
+    protected String programa;
+    protected String tipo_etnia;
 
     public Estudiante(String nombre, String edad, String programa, String tipo_etnia) {
         this.nombre = nombre;
